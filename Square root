@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+float sroot(float x){
+
+  float i = x;
+  float y = 1;
+  float h = 0.000001;
+  while(i-y > h)
+    {
+      i= (i+ y)/2;
+      y = x/i;
+    }
+  return i;
+  }
+  int main(){
+    int m;
+    cout<<"Type an integer to get the square root."<<endl;
+    cin>>m;
+    float j= sroot(m);
+    cout<<"The square root is "<<j<<endl;
+    return 0;
+    }
